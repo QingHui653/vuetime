@@ -36,6 +36,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      //使用别名 将相对路径 图片 假设成 绝对 路径 路径前加~
+      'assets': path.resolve(__dirname, '../src/assets'),
     }
   },
   module: {

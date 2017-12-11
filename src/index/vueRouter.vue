@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="view">
+    <!-- 需要在webpack.conf.js 中配置 别名 -->
+    <img src="~assets/logo.png">
     <h1>Hello App!</h1>
     <p>
       <!--使用 router-link 组建来导航-->
@@ -30,9 +31,6 @@
             router.push({path:'register',query:{plan:'private'}}) 
         router.replace(location)  不会向浏览器 添加新记录
             -->
-
-
-
     <!-- 多个页面可以有多个router-view  -->
     <!-- <router-view class="view one"></router-view>
     <router-view class="view two" name="a"></router-view>
@@ -43,12 +41,12 @@
 
 <script>
 export default {
-  name: "app"
+  name: "view",
 };
 </script>
 
 <style>
-#app {
+#view {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

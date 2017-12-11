@@ -1,17 +1,17 @@
 <template>
-  <div id="view">
+  <div id="index">
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: "view"
+  name: "index"
 };
 </script>
 
 <style>
-#view {
+#index {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

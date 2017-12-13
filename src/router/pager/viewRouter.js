@@ -1,5 +1,5 @@
 // vue router 路由 界面
-import vueRouter from '@/index/vueRouter'
+import vueRouter from '@/views/vueRouter'
 /* //1.定义路由组建
 //可以从其他文件import 进来 */
 const Foo = {
@@ -26,39 +26,39 @@ const UserNull = {
 }
 
 export default [{
-    path: '/view',
-    component: vueRouter
-  },
+  path: '/view',
+  component: vueRouter
+},
   /* 1.不带参数路由 */
-  {
-    path: '/foo',
-    component: Foo
-  },
-  {
-    path: '/bar',
-    component: Bar
-  },
+{
+  path: '/foo',
+  component: Foo
+},
+{
+  path: '/bar',
+  component: Bar
+},
   /* 2.带参数路由 */
-  {
-    path: '/user/:id',
-    component: User
-  },
+{
+  path: '/user/:id',
+  component: User
+},
   /* 3.嵌套路由 */
+{
+  path: '/user2/:id',
+  component: User2,
+  children: [{
+    path: '',
+    component: UserNull
+  },
   {
-    path: '/user2/:id',
-    component: User2,
-    children: [{
-        path: '',
-        component: UserNull
-      },
-      {
-        path: 'profile',
-        component: UserProfile
-      },
-      {
-        path: 'posts',
-        component: UserPosts
-      }
-    ]
+    path: 'profile',
+    component: UserProfile
+  },
+  {
+    path: 'posts',
+    component: UserPosts
   }
+  ]
+}
 ]

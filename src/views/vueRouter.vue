@@ -41,8 +41,8 @@
 
 <script>
 export default {
-  name: "view",
-};
+  name: 'view'
+}
 </script>
 
 <style>

@@ -11,7 +11,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/locale'
 
-import vueIndex from '@/views/vueIndex'
+import index from '@/views/index'
 import store from './store'
 
 Vue.config.productionTip = false
@@ -24,9 +24,13 @@ let vm = new Vue({
   /* 第一种 index 引用 */
   /* render: h => h(vueIndex) */
   /* 第二种 index 引用 */
-  template: '<vueIndex/>',
+  template: '<index/>',
   components: {
-    vueIndex
+    index
+  },
+  created: function () {
+    // `this` 指向 vm 实例
+    console.log('main.js Vue init ' + this.el)
   }
 })
 
@@ -34,4 +38,8 @@ Vue.use({
   vm,
   Vuex,
   ElementUI
+})
+
+Vue.component('todo-item', {
+  template: '<li>这是个待办项</li>'
 })

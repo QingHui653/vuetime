@@ -1,6 +1,11 @@
-// vue index 页面
-import HelloWorld from '@/components/index/HelloWorld'
+
+import vueIndex from '@/views/pager/vueIndex'
+import helloWorld from '@/components/index/HelloWorld'
 export default [{
   path: '/',
-  component: HelloWorld
+  component: vueIndex,
+  children: [{
+    path: '',
+    component: helloWorld
+  }]
 }]

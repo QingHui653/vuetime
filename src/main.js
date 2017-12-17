@@ -11,12 +11,18 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/locale'
 
+import axios from 'axios'
+
 import vueIndex from '@/views/vueIndex'
 import store from './store'
 
 Vue.config.productionTip = false
 
-let vm = new Vue({
+Vue.prototype.$http = axios
+Vue.use(Vuex)
+Vue.use(ElementUI)
+
+var vm = new Vue({
   el: '#app',
   router: router,
   store: store,
@@ -28,10 +34,4 @@ let vm = new Vue({
   components: {
     vueIndex
   }
-})
-
-Vue.use({
-  vm,
-  Vuex,
-  ElementUI
 })

@@ -12,11 +12,17 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/locale'
 
 import index from '@/views/index'
+import axios from 'axios'
+
 import store from './store'
 
 Vue.config.productionTip = false
 
-let vm = new Vue({
+Vue.prototype.$http = axios
+Vue.use(Vuex)
+Vue.use(ElementUI)
+
+var vm = new Vue({
   el: '#app',
   router: router,
   store: store,
@@ -33,12 +39,7 @@ let vm = new Vue({
     console.log('main.js Vue init ' + this.el)
   }
 })
-
-Vue.use({
-  vm,
-  Vuex,
-  ElementUI
-})
+vm()
 
 Vue.component('todo-item', {
   template: '<li>这是个待办项</li>'

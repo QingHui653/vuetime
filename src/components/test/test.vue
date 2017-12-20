@@ -85,6 +85,7 @@
       <!--只渲染一次 -->
       <span v-once>{{msg}}</span>
     </div>
+    <author></author>
   </div>
 </template>
 

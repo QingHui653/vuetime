@@ -93,7 +93,7 @@ export default {
 .el-button{
   float:right
 }
-.el-input{
+.el-input.el-input--suffix{
   margin-right: 15px;
   margin-bottom: 15px;
   width: 200px;

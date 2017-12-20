@@ -21,6 +21,9 @@ Vue.config.productionTip = false
 Vue.prototype.$http = axios
 Vue.use(Vuex)
 Vue.use(ElementUI)
+Vue.component('todo-item', {
+  template: '<li>这是个待办项</li>'
+})
 
 var vm = new Vue({
   el: '#app',
@@ -39,8 +42,4 @@ var vm = new Vue({
     console.log('main.js Vue init ' + this.el)
   }
 })
-vm()
-
-Vue.component('todo-item', {
-  template: '<li>这是个待办项</li>'
-})
+Vue.use(vm)

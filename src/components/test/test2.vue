@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     add: function () {
-      add()
+      // add()
     }
   },
   directives: {

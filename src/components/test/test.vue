@@ -24,17 +24,17 @@
     3.循环数组 (v-for)
     <div id="for">
       <ol>
-        <li v-for="(todo,index) in todos">
+        <li v-for="(todo,index) in todos" :key="todo.text">
           {{ index }} -- {{ todo.text }}
         </li>
       </ol>
       <!--过滤-->
       <ol>
-        <li v-for="n in evenNumbers">{{ n }}</li>
+        <li v-for="n in evenNumbers" :key="n">{{ n }}</li>
       </ol>
       <!-- 自定义 方法 过滤 -->
       <ol>
-        <li v-for="n in sortMynumber">{{ n }}</li>
+        <li v-for="n in sortMynumber" :key="n">{{ n }}</li>
       </ol>
     </div>
     <br> 

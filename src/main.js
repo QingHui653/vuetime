@@ -11,10 +11,11 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/locale'
 
-import index from '@/views/index'
 import axios from 'axios'
-
 import store from './store'
+
+/* import index from '@/views/index' */
+import App from './App'
 
 Vue.config.productionTip = false
 
@@ -33,9 +34,9 @@ var vm = new Vue({
   /* 第一种 index 引用 */
   /* render: h => h(vueIndex) */
   /* 第二种 index 引用 */
-  template: '<index/>',
+  template: '<App/>',
   components: {
-    index
+    App
   },
   created: function () {
     // `this` 指向 vm 实例

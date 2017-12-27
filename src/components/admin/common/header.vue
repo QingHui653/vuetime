@@ -37,9 +37,9 @@
                             </el-badge>
                         </span>
                         <el-dropdown-menu slot="dropdown">
-                            <el-dropdowm-item>
+                            <el-dropdown-item>
                                 <span class="pop-title"> 你有新的消息!</span>
-                            </el-dropdowm-item>
+                            </el-dropdown-item>
                             <el-dropdown-item  v-for="dialog in dialogs" :key="dialog.time" divided>
                                  <div class="pop-div">
                                         <span class="pop-image"><img :src="dialog.header" width="50px" ></span>

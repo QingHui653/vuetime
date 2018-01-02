@@ -3,7 +3,7 @@
 // main.js  和 index.html 都 配置 在 webpack 文件 中 加载 时 导入
 
 import Vue from 'vue'
-import router from '@/router'
+import {router} from '@/router/index'
 import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
 

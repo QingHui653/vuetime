@@ -27,7 +27,7 @@ export default {
                     {content: 'What do you think?', isDone: false},
                     {content: 'Have fun with blue admin', isDone: false},
                     {content: 'Write email to business cat', isDone: false},
-                    {content: 'Get in touch with jspang team', isDone: false},
+                    {content: 'Get in touch with Kk team', isDone: false},
                     {content: 'Ei cum soleet appareat,ex est graeci medioc', isDone: false},
                     {content: 'Simaul erroribus ad usu', isDone: false},
                     {content: 'Vim an eius ocurreret abhorreant,id name a', isDone: false}

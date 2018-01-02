@@ -134,7 +134,7 @@ export default {
             {header: 'static/images/b_header3.jpg', content: '晚上我开车送你回家，你请我吃晚饭。', time: '45分钟前'}
       ],
       tasks: [
-            {id: 1, rank: 1, content: '完成JSPangAdmin头部头部组件的编写。', overTime: '2017/3/9'},
+            {id: 1, rank: 1, content: '完成头部头部组件的编写。', overTime: '2017/3/9'},
             {id: 2, rank: 2, content: '完成GitHub仓库的初始化工作。', overTime: '2017/3/15'},
             {id: 3, rank: 3, content: '在阿里云进行网站备案，完成后通知组长。', overTime: '2017/3/20'}
 

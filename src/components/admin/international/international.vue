@@ -131,3 +131,14 @@ export default {
   }
 }
 </script>
+
+<style>
+.switch-language-row1{
+    height: 240px !important;
+}
+.switch-language-tip{
+    font-size: 12px;
+    color: gray;
+    margin-top: 30px;
+}
+</style>

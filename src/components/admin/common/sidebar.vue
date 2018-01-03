@@ -16,6 +16,8 @@
                 <el-menu-item index="MarkdownPage">Markdown</el-menu-item>
                 <el-menu-item index="TodoList">TodoList</el-menu-item>
                 <el-menu-item index="Internation">Internation</el-menu-item>
+                <el-menu-item index="Map">Map</el-menu-item>
+                <el-menu-item index="Count">Vuex Count</el-menu-item>
         </el-submenu>
 
         <el-submenu index="3">

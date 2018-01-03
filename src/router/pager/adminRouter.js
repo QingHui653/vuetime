@@ -12,6 +12,8 @@ import BasicTables from '@/components/admin/page/BasicTables'
 import TodoList from '@/components/admin//page/TodoListPage'
 
 import Internation from '@/components/admin/international/international'
+import Map from '@/components/admin/map/map'
+import Count from '@/components/admin/count/count'
 
 export default [{
   path: '/',
@@ -46,6 +48,12 @@ export default [{
   }, {
     path: '/Internation',
     component: Internation
+  }, {
+    path: '/Map',
+    component: Map
+  }, {
+    path: '/Count',
+    component: Count
   }
   ]
 }]

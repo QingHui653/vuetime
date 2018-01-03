@@ -5,11 +5,13 @@
 import Vue from 'vue'
 import {router} from '@/router/index'
 import Vuex from 'vuex'
-import VueI18n from 'vue-i18n'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import '@/locale'
+import i18n from '@/locale/index'
+
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 
 import axios from 'axios'
 import store from './store'
@@ -20,8 +22,11 @@ import App from './App'
 Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
+
 Vue.use(Vuex)
 Vue.use(ElementUI)
+Vue.use(iView)
+
 Vue.component('todo-item', {
   template: '<li>这是个待办项</li>'
 })
@@ -30,7 +35,7 @@ var vm = new Vue({
   el: '#app',
   router: router,
   store: store,
-  VueI18n,
+  i18n, // 此处必须
   /* 第一种 index 引用 */
   /* render: h => h(vueIndex) */
   /* 第二种 index 引用 */

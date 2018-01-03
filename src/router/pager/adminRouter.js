@@ -11,6 +11,8 @@ import FormLayouts from '@/components/admin/page/FormLayouts'
 import BasicTables from '@/components/admin/page/BasicTables'
 import TodoList from '@/components/admin//page/TodoListPage'
 
+import Internation from '@/components/admin/international/international'
+
 export default [{
   path: '/',
   component: Home,
@@ -41,6 +43,9 @@ export default [{
   }, {
     path: '/TodoList',
     component: TodoList
+  }, {
+    path: '/Internation',
+    component: Internation
   }
   ]
 }]

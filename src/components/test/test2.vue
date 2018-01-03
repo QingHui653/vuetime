@@ -29,9 +29,6 @@ export default {
       authorUrl: 'http://www.ihih.club:8089'
     }
   },
-  created: function () {
-    console.log('test2.js Vue init ' + this.name)
-  },
   methods: {
     add: function () {
       add()
@@ -69,6 +66,36 @@ export default {
     color: function (el, binding, vnode) {
       el.style = 'color:' + binding.value
     }
+  },
+  beforeCreate: function () {
+    console.log('1-beforeCreate 初始化之后')
+  },
+  created: function () {
+    console.log('test2.js Vue init ' + this.name)
+  },
+  beforeMount: function () {
+    console.log('3-beforeMount 挂载之前')
+  },
+  mounted: function () {
+    console.log('4-mounted 被创建')
+  },
+  beforeUpdate: function () {
+    console.log('5-beforeUpdate 数据更新前')
+  },
+  updated: function () {
+    console.log('6-updated 被更新后')
+  },
+  activated: function () {
+    console.log('7-activated')
+  },
+  deactivated: function () {
+    console.log('8-deactivated')
+  },
+  beforeDestroy: function () {
+    console.log('9-beforeDestroy 销毁之前')
+  },
+  destroyed: function () {
+    console.log('10-destroyed 销毁之后')
   }
 }
 </script>

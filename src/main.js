@@ -3,8 +3,8 @@
 // main.js  和 index.html 都 配置 在 webpack 文件 中 加载 时 导入
 
 import Vue from 'vue'
+import App from './App'
 import {router} from '@/router/index'
-import Vuex from 'vuex'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -14,16 +14,25 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 
 import axios from 'axios'
-import store from './store'
+import store from '@/store/index'
 
 /* import index from '@/views/index' */
-import App from './App'
+import {getRequest} from '@/utils/api'
+import {postRequest} from '@/utils/api'
+import {deleteRequest} from './utils/api'
+import {putRequest} from './utils/api'
+import {isNotNullORBlank} from './utils/utils'
+import './utils/filter_utils'
 
 Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
+Vue.prototype.getRequest = getRequest
+Vue.prototype.postRequest = postRequest
+Vue.prototype.deleteRequest = deleteRequest
+Vue.prototype.putRequest = putRequest
+Vue.prototype.isNotNullORBlank = isNotNullORBlank
 
-Vue.use(Vuex)
 Vue.use(ElementUI)
 Vue.use(iView)
 
@@ -33,8 +42,8 @@ Vue.component('todo-item', {
 
 var vm = new Vue({
   el: '#app',
-  router: router,
-  store: store,
+  router,
+  store,
   i18n, // 此处必须
   /* 第一种 index 引用 */
   /* render: h => h(vueIndex) */

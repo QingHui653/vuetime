@@ -16,44 +16,46 @@ import Map from '@/components/admin/map/map'
 import Count from '@/components/admin/count/count'
 
 export default [{
-  path: '/',
+  path: '/admin',
   component: Home,
-  children: [{
+  children: [
+    /* {
     path: '',
     component: DashBoard
-  }, {
-    path: '/DashBoard',
-    component: DashBoard
-  }, {
-    path: '/EditorPage',
-    component: EditorPage
-  }, {
-    path: '/MarkdownPage',
-    component: MarkdownPage
-  }, {
-    path: '/BasicCharts',
-    component: AmCharts
-  }, {
-    path: '/FormInput',
-    component: FormInput
-  }, {
-    path: '/FormLayouts',
-    component: FormLayouts
-  }, {
-    path: '/BasicTables',
-    component: BasicTables
-  }, {
-    path: '/TodoList',
-    component: TodoList
-  }, {
-    path: '/Internation',
-    component: Internation
-  }, {
-    path: '/Map',
-    component: Map
-  }, {
-    path: '/Count',
-    component: Count
-  }
+  },  */
+    {
+      path: '/DashBoard',
+      component: DashBoard
+    }, {
+      path: '/EditorPage',
+      component: EditorPage
+    }, {
+      path: '/MarkdownPage',
+      component: MarkdownPage
+    }, {
+      path: '/BasicCharts',
+      component: AmCharts
+    }, {
+      path: '/FormInput',
+      component: FormInput
+    }, {
+      path: '/FormLayouts',
+      component: FormLayouts
+    }, {
+      path: '/BasicTables',
+      component: BasicTables
+    }, {
+      path: '/TodoList',
+      component: TodoList
+    }, {
+      path: '/Internation',
+      component: Internation
+    }, {
+      path: '/Map',
+      component: Map
+    }, {
+      path: '/Count',
+      component: Count
+    }
   ]
 }]

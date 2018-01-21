@@ -10,18 +10,18 @@
 
         <!-- header search area -->
         <el-col :xs="12" :sm="12" :md="8">
-            <!-- <div class="search">
+            <div class="search">
                 <el-input placeholder="搜索..." suffix-icon="el-icon-search">
                 </el-input>
-            </div> -->
+            </div>
         </el-col>
 
         <!-- header right area -->
         <el-col :xs="24" :sm="12" :md="4">
-            <!-- <div class="website">
+            <div class="website">
                 <span>web:</span>
-                <span>www.ihih.club:8089</span>
-            </div> -->
+                <span>念天地之悠悠</span>
+            </div>
         </el-col>
 
 

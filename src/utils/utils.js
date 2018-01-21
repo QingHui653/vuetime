@@ -15,7 +15,7 @@ export const initMenu = (router, store) => {
   if (store.state.login.routes.length > 0) {
     return
   }
-  getRequest('/config/sysmenu').then(resp => {
+  getRequest('/sysmenu').then(resp => {
     if (resp && resp.status === 200) {
       var fmtRoutes = formatRoutes(resp.data)
       router.addRoutes(fmtRoutes)
@@ -37,10 +37,14 @@ export const formatRoutes = (routes) => {
     if (children && children instanceof Array) {
       children = formatRoutes(children)
     }
+    // 参考 https://github.com/lenve/vhr
+    // 一开始 就全部加载路由
+    // vuex 设置 左侧 菜单 跳转的 url
     let fmRouter = {
       path: path,
-      component (resolve) {
-        /* if (component.startsWith('Home')) {
+      /* component (resolve) {
+        require(['../components/' + component + '.vue'], resolve)
+        if (component.startsWith('Home')) {
           require(['../components/' + component + '.vue'], resolve)
         } else if (component.startsWith('Emp')) {
           require(['../components/emp/' + component + '.vue'], resolve)
@@ -52,8 +56,8 @@ export const formatRoutes = (routes) => {
           require(['../components/statistics/' + component + '.vue'], resolve)
         } else if (component.startsWith('Sys')) {
           require(['../components/system/' + component + '.vue'], resolve)
-        } */
-      },
+        }
+      }, */
       name: name,
       iconCls: iconCls,
       meta: meta,

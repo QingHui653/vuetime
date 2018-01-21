@@ -51,7 +51,6 @@ router.beforeEach((to, from, next) => {
   console.info(from)
   if (to.path === '/') {
     next()
-    return
   }
   var name = store.state.login.user.name
   if (name === '未登录') {

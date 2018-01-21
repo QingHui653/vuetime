@@ -1,50 +1,32 @@
 <template>
   <div class="sidebar">
       <el-menu default-active="onRouters" class="el-menu-vertical-demo" background-color="#324157" text-color="#fff" active-text-color="#ffd04b" unique-opened router>
-
+        
         <el-menu-item index="DashBoard">
             <span class="sb-icon"><i class="material-icons">home</i></span>
             <span class="sb-cn">DashBoard</span>
         </el-menu-item>
 
-        <el-submenu index="2">
-                <template slot="title">
-                    <span class="sb-icon"><i class="material-icons">perm_data_setting</i></span>
-                    <span class="sb-cn">Components</span>
-                </template>
-                <el-menu-item index="EditorPage">Editor</el-menu-item>
-                <el-menu-item index="MarkdownPage">Markdown</el-menu-item>
-                <el-menu-item index="TodoList">TodoList</el-menu-item>
-                <el-menu-item index="Internation">Internation</el-menu-item>
-                <el-menu-item index="Map">Map</el-menu-item>
-                <el-menu-item index="Count">Vuex Count</el-menu-item>
-        </el-submenu>
+        <el-menu-item index="Role">
+            <span class="sb-icon"><i class="material-icons">security</i></span>
+            <span class="sb-cn">Role</span>
+        </el-menu-item>
 
-        <el-submenu index="3">
-                <template slot="title">
-                    <span class="sb-icon"><i class="material-icons">pie_chart</i></span>
-                    <span class="sb-cn">charts</span>
-                </template>
-                <el-menu-item index="BasicCharts"> BasicCharts</el-menu-item>
-        </el-submenu>
+        <template v-for="(item,index) in this.routes" v-if="!item.hidden">
+                <el-submenu :key="index" :index="index+''">
+                    <template slot="title">
+                        <span class="sb-icon"><i class="material-icons">{{item.iconCls}}</i></span>
+                        <span slot="sb-cn">{{item.name}}</span>
+                    </template>
 
-        <el-submenu index="4">
-                <template slot="title">
-                    <span class="sb-icon"><i class="material-icons">content_paste</i></span>
-                    <span class="sb-cn">Form Elements</span>
-                </template>
-                <el-menu-item index="FormInput"> Form Inputs</el-menu-item>
-                <el-menu-item index="FormLayouts">  Form Layouts</el-menu-item>
-        </el-submenu>
-
-        <el-submenu index="5">
-                <template slot="title">
-                    <span class="sb-icon"><i class="material-icons">border_all</i></span>
-                    <span class="sb-cn">Tables</span>
-                </template>
-                <el-menu-item index="BasicTables"> Basic Tables</el-menu-item>
-        </el-submenu>
-
+                    <el-menu-item width="180px"
+                                    style="padding-left: 30px;padding-right:0px;margin-left: 0px;width: 170px;text-align: left"
+                                    v-for="child in item.children"
+                                    :index="child.path"
+                                    :key="child.path">{{child.name}}
+                    </el-menu-item>
+                </el-submenu>
+        </template>
 
       </el-menu>
   </div>
@@ -54,6 +36,9 @@
 /* 路由 应该 是 由后台查询 for 循环 生成 */
 export default {
   computed: {
+    routes () {
+      return this.$store.state.login.routes
+    },
     onRouter () {
       return this.$router.path.replace('/', '')
     }

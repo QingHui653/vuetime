@@ -15,6 +15,8 @@ import Internation from '@/components/admin/international/international'
 import Map from '@/components/admin/map/map'
 import Count from '@/components/admin/count/count'
 
+import Role from '@/components/admin/role/role'
+
 export default [{
   path: '/admin',
   component: Home,
@@ -56,6 +58,9 @@ export default [{
     }, {
       path: '/Count',
       component: Count
+    }, {
+      path: '/Role',
+      component: Role
     }
   ]
 }]

@@ -1,6 +1,6 @@
 
-import movie from '@/views/movie'
+// import movie from '@/views/movie'
 export default [{
   path: '/movie',
-  component: movie
+  component: resolve => require(['@/views/movie'], resolve)
 }]

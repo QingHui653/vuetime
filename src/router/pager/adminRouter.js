@@ -1,5 +1,5 @@
 
-import Home from '@/components/admin/common/Home'
+// import Home from '@/components/admin/common/Home'
 
 // import DashBoard from '@/components/admin/page/DashBoard'
 // import EditorPage from '@/components/admin/page/EditorPage'
@@ -17,6 +17,24 @@ import Home from '@/components/admin/common/Home'
 
 // import Role from '@/components/admin/role/role'
 
+const Home = resolve => require(['@/components/admin/common/Home'], resolve)
+
+const DashBoard = resolve => require(['@/components/admin/page/DashBoard'], resolve)
+const EditorPage = resolve => require(['@/components/admin/page/EditorPage'], resolve)
+const MarkdownPage = resolve => require(['@/components/admin/page/MarkdownPage'], resolve)
+const AmCharts = resolve => require(['@/components/admin/page/BasicCharts'], resolve)
+
+const FormInput = resolve => require(['@/components/admin/page/FormInput'], resolve)
+const FormLayouts = resolve => require(['@/components/admin/page/FormLayouts'], resolve)
+const BasicTables = resolve => require(['@/components/admin/page/BasicTables'], resolve)
+const TodoList = resolve => require(['@/components/admin//page/TodoListPage'], resolve)
+
+const Internation = resolve => require(['@/components/admin/international/international'], resolve)
+const Map = resolve => require(['@/components/admin/map/map'], resolve)
+const Count = resolve => require(['@/components/admin/count/count'], resolve)
+
+const Role = resolve => require(['@/components/admin/role/role'], resolve)
+
 export default [{
   path: '/admin',
   component: Home,
@@ -27,40 +45,40 @@ export default [{
   },  */
     {
       path: '/DashBoard',
-      component: resolve => require(['@/components/admin/page/DashBoard'], resolve)
+      component: DashBoard
     }, {
       path: '/EditorPage',
-      component: resolve => require(['@/components/admin/page/EditorPage'], resolve)
+      component: EditorPage
     }, {
       path: '/MarkdownPage',
-      component: resolve => require(['@/components/admin/page/MarkdownPage'], resolve)
+      component: MarkdownPage
     }, {
       path: '/BasicCharts',
-      component: resolve => require(['@/components/admin/page/BasicCharts'], resolve)
+      component: AmCharts
     }, {
       path: '/FormInput',
-      component: resolve => require(['@/components/admin/page/FormInput'], resolve)
+      component: FormInput
     }, {
       path: '/FormLayouts',
-      component: resolve => require(['@/components/admin/page/FormLayouts'], resolve)
+      component: FormLayouts
     }, {
       path: '/BasicTables',
-      component: resolve => require(['@/components/admin/page/BasicTables'], resolve)
+      component: BasicTables
     }, {
       path: '/TodoList',
-      component: resolve => require(['@/components/admin//page/TodoListPage'], resolve)
+      component: TodoList
     }, {
       path: '/Internation',
-      component: resolve => require(['@/components/admin/international/international'], resolve)
+      component: Internation
     }, {
       path: '/Map',
-      component: resolve => require(['@/components/admin/map/map'], resolve)
+      component: Map
     }, {
       path: '/Count',
-      component: resolve => require(['@/components/admin/count/count'], resolve)
+      component: Count
     }, {
       path: '/Role',
-      component: resolve => require(['@/components/admin/role/role'], resolve)
+      component: Role
     }
   ]
 }]

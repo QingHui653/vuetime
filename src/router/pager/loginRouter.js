@@ -1,6 +1,8 @@
 
+// import Home from '@/views/Home'
 import Login from '@/views/Login'
-import Home from '@/views/Home'
+const Home = resolve => require(['@/views/Home'], resolve)
+
 export default [{
   path: '/',
   name: 'Login',

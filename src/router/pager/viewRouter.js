@@ -1,5 +1,7 @@
 // vue router 路由 界面
-import vueRouter from '@/views/pager/vueRouter'
+// import vueRouter from '@/views/pager/vueRouter'
+
+const vueRouter = resolve => require(['@/views/pager/vueRouter'], resolve)
 /* //1.定义路由组建
 //可以从其他文件import 进来 */
 const Foo = {

@@ -10,8 +10,8 @@ import movieRouter from '@/router/pager/movieRouter'
 import adminRouter from '@/router/pager/adminRouter'
 import loginRouter from '@/router/pager/loginRouter'
 
-import Login from '@/views/Login'
-import Home from '@/views/Home'
+// import Login from '@/views/Login'
+// import Home from '@/views/Home'
 
 Vue.use(Router)
 

@@ -1,11 +1,15 @@
 
 // import vueIndex from '@/views/pager/vueIndex'
 // import helloWorld from '@/components/index/HelloWorld'
+
+const vueIndex = resolve => require(['@/views/pager/vueIndex'], resolve)
+const helloWorld = resolve => require(['@/components/index/HelloWorld'], resolve)
+
 export default [{
   path: '/index',
-  component: resolve => require(['@/views/pager/vueIndex'], resolve),
+  component: vueIndex,
   children: [{
     path: '',
-    component: resolve => require(['@/components/index/HelloWorld'], resolve)
+    component: helloWorld
   }]
 }]

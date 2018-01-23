@@ -19,7 +19,9 @@ const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
-      extract: true,
+      //此处 原为 true 
+      //会 导致 iview 资源包 加载 错误
+      extract: false,
       usePostCSS: true
     })
   },

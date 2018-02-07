@@ -1,6 +1,8 @@
 import axios from 'axios'
 import {Message} from 'element-ui'
+import store from '@/store/index'
 
+axios.defaults.headers['token'] = store.state.login.token
 axios.interceptors.request.use(config => {
   return config
 }, err => {
@@ -24,7 +26,7 @@ axios.interceptors.response.use(data => {
   return Promise.resolve(err)
 })
 
-let base = 'http://119.23.231.239:8089'
+let base = 'http://127.0.0.1:8089'
 
 export const postRequest = (url, params) => {
   return axios({

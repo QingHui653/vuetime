@@ -46,6 +46,22 @@
             _this.$router.replace({path: path == '/' || path == undefined ? '/DashBoard' : path})
           }
         })
+      },
+      jwtLogin: function () {
+        var _this = this
+        this.loading = true
+        this.postRequest('/jwtlogin', {
+          userName: this.loginForm.username,
+          passWord: this.loginForm.password
+        }).then(resp => {
+          _this.loading = false
+          if (resp && resp.status === 200) {
+            var data = resp.data
+            _this.$store.commit('jwtlogin', data.data)
+            var path = _this.$route.query.redirect
+            _this.$router.replace({path: path === '/' || path === undefined ? '/DashBoard' : path})
+          }
+        })
       }
     }
   }

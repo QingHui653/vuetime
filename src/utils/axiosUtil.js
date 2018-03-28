@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 import {Message} from 'element-ui'
 
-let base = 'http://127.0.0.1:8089'
+let base = 'http://193.112.44.172:8089'
 
 const Axios = axios.create({
   baseURL: base,

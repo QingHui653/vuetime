@@ -26,7 +26,7 @@ axios.interceptors.response.use(data => {
   return Promise.resolve(err)
 })
 
-let base = 'http://127.0.0.1:8089'
+let base = 'http://193.112.44.172:8089'
 
 export const postRequest = (url, params) => {
   return axios({

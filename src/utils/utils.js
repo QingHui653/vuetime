@@ -16,7 +16,7 @@ export const initMenu = (router, store) => {
     return
   }
   // getRequest('/sysmenu').then(resp => {
-  mock('/src/mock/sysMenu.json').then(resp => {
+  mock('/static/mock/sysMenu.json').then(resp => {
     if (resp && resp.status === 200) {
       var fmtRoutes = formatRoutes(resp.data)
       router.addRoutes(fmtRoutes)

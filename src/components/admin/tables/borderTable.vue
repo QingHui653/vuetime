@@ -17,7 +17,7 @@ export default {
   },
   created () {
     console.info('111111')
-    this.mock('/src/mock/t1.json').then(resp => {
+    this.mock('/static/mock/t1.json').then(resp => {
       if (resp && resp.status === 200) {
         this.tableData = resp.data
       }

@@ -48,7 +48,7 @@ export default {
       params.append('movieName', this.movieName)
       params.append('currentPage', this.currentPage)
       params.append('pageSize', this.pageSize)
-      var url = 'http://www.ihih.club:8089/findPage'
+      var url = 'http://193.112.44.172:8089/findPage'
       /* var url = 'http://localhost:8089/findPage' */
       this.$http.post(url, params)
         .then(function (res) {

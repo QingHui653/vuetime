@@ -84,3 +84,10 @@ export const getRequest = (url) => {
     url: `${base}${url}`
   })
 }
+
+export const mock = (url) => {
+  return axios({
+    method: 'get',
+    url: `${url}`
+  })
+}

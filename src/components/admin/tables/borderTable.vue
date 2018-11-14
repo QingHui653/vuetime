@@ -9,56 +9,21 @@
 </template>
 
 <script>
-    export default {
-      data () {
-        return {
-          tableData: [{
-            id: 1,
-            userName: 'JSpang',
-            age: '30',
-            ability: 'HTML5,PHP',
-            value: '80%'
-          }, {
-            id: 2,
-            userName: 'King',
-            age: '28',
-            ability: 'Web,PHP',
-            value: '70%'
-          }, {
-            id: 3,
-            userName: 'Panda',
-            age: '30',
-            ability: 'PHP,MySql',
-            value: '60%'
-          }, {
-            id: 4,
-            userName: 'HaiPu',
-            age: '35',
-            ability: 'Web,DB',
-            value: '80%'
-          }, {
-            id: 3,
-            userName: 'Panda',
-            age: '30',
-            ability: 'PHP,MySql',
-            value: '60%'
-          }, {
-            id: 4,
-            userName: 'HaiPu',
-            age: '35',
-            ability: 'Web,DB',
-            value: '80%'
-          }, {
-            id: 3,
-            userName: 'Panda',
-            age: '30',
-            ability: 'PHP,MySql',
-            value: '60%'
-          }]
-        }
-      }
+export default {
+  data () {
+    return {
+      tableData: []
     }
+  },
+  created () {
+    console.info('111111')
+    this.mock('/src/mock/t1.json').then(resp => {
+      if (resp && resp.status === 200) {
+        this.tableData = resp.data
+      }
+    })
+  }
+}
 </script>
 <style scoped>
-    
 </style>

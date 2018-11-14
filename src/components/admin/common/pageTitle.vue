@@ -2,7 +2,8 @@
     <div class="pageTitle">
         <div class="pt-left">
             <h2>
-                {{vtitle.toUpperCase()}}
+                <!--{{vtitle.toUpperCase()}}-->
+                {{vtitle}}
             </h2>
         </div>
 

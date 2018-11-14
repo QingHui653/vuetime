@@ -21,6 +21,7 @@ import {getRequest} from '@/utils/api'
 import {postRequest} from '@/utils/api'
 import {deleteRequest} from './utils/api'
 import {putRequest} from './utils/api'
+import {mock} from './utils/api'
 import {isNotNullORBlank} from './utils/utils'
 import './utils/filter_utils'
 
@@ -31,6 +32,7 @@ Vue.prototype.getRequest = getRequest
 Vue.prototype.postRequest = postRequest
 Vue.prototype.deleteRequest = deleteRequest
 Vue.prototype.putRequest = putRequest
+Vue.prototype.mock = mock
 Vue.prototype.isNotNullORBlank = isNotNullORBlank
 
 Vue.use(ElementUI)

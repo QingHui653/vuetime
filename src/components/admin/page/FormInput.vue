@@ -51,13 +51,10 @@
                             </el-checkbox-group>
                         </el-form-item>
                         <el-form-item>
-                            <el-button  >立即创建</el-button>
+                            <el-button>立即创建</el-button>
                             <el-button>取消</el-button>
                         </el-form-item>
-                        </el-form>
-
-
-
+                    </el-form>
 
                 </el-card>
             </el-col>

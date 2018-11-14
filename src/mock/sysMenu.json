@@ -1,0 +1,186 @@
+[
+    {
+        "id": 3,
+        "path": "",
+        "component": "",
+        "name": "组件",
+        "iconCls": "perm_data_setting",
+        "children": [
+            {
+                "id": null,
+                "path": "/EditorPage",
+                "component": "",
+                "name": "Editor",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/MarkdownPage",
+                "component": "",
+                "name": "Markdown",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/TodoList",
+                "component": "",
+                "name": "TodoList",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/Internation",
+                "component": "",
+                "name": "Internation",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/Map",
+                "component": "",
+                "name": "Map",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/Count",
+                "component": "",
+                "name": "Vuex Count",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            }
+        ],
+        "meta": {
+            "keepAlive": false,
+            "requireAuth": true
+        }
+    },
+    {
+        "id": 4,
+        "path": "",
+        "component": "",
+        "name": "图表",
+        "iconCls": "pie_chart",
+        "children": [
+            {
+                "id": null,
+                "path": "/BasicCharts",
+                "component": "",
+                "name": "BasicCharts",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            }
+        ],
+        "meta": {
+            "keepAlive": false,
+            "requireAuth": true
+        }
+    },
+    {
+        "id": 5,
+        "path": "",
+        "component": "",
+        "name": "表单元素",
+        "iconCls": "content_paste",
+        "children": [
+            {
+                "id": null,
+                "path": "/FormInput",
+                "component": "",
+                "name": "Form Inputs",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/FormLayouts",
+                "component": "",
+                "name": " Form Layouts",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/FormSubmit",
+                "component": "",
+                "name": " Form Submit",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            }
+        ],
+        "meta": {
+            "keepAlive": false,
+            "requireAuth": true
+        }
+    },
+    {
+        "id": 6,
+        "path": "",
+        "component": "",
+        "name": "表单",
+        "iconCls": "border_all",
+        "children": [
+            {
+                "id": null,
+                "path": "/BasicTables",
+                "component": "",
+                "name": "Basic Tables",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            }
+        ],
+        "meta": {
+            "keepAlive": false,
+            "requireAuth": true
+        }
+    }
+]

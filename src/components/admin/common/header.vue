@@ -4,31 +4,31 @@
         <!--Logo-->
         <el-col :xs="12" :sm="12" :md="4">
             <div class="logo">
-                <span class="logo_prefix">ihih</span><span class="logo_suffix">Admin</span>
+                <span class="logo_prefix">ihih</span><!-- <span class="logo_suffix">Admin</span> -->
             </div>
         </el-col>
 
         <!-- header search area -->
-        <el-col :xs="12" :sm="12" :md="8">
+        <!-- <el-col :xs="12" :sm="12" :md="8">
             <div class="search">
                 <el-input placeholder="搜索..." suffix-icon="el-icon-search">
                 </el-input>
             </div>
-        </el-col>
+        </el-col> -->
 
         <!-- header right area -->
-        <el-col :xs="24" :sm="12" :md="4">
+        <!-- <el-col :xs="24" :sm="12" :md="4">
             <div class="website">
                 <span>web:</span>
                 <span>念天地之悠悠</span>
             </div>
-        </el-col>
+        </el-col> -->
 
 
-        <el-col :sx="8" :sm="8" :md="{span:2,offset:4}">
+        <el-col :sx="8" :sm="8" :md="{span:2,offset:16}">
             <div class="header-right">
-                <el-col :span="10">
 
+                <el-col :span="10">
                     <!-- 消息 -->
                     <el-dropdown menu-align="start">
                         <span>
@@ -52,7 +52,6 @@
                 </el-col>
 
                 <el-col :span="8">
-
                     <!-- 任务 -->
                     <el-dropdown menu-align="start"  >
                             <span >
@@ -62,8 +61,9 @@
                             </span>
                             <el-dropdown-menu slot="dropdown" >
                                 <el-dropdown-item >
-                                <span class="pop-title">你有新的任务! </span>
+                                     <span class="pop-title">你有新的任务! </span>
                                 </el-dropdown-item>
+
                                 <el-dropdown-item v-for="task in tasks" :key="task.id" divided>
                                     <div class="task-div">
                                         <span class="task-span task-tag">
@@ -78,8 +78,9 @@
                                 </el-dropdown-item>
 
                             </el-dropdown-menu>
-                        </el-dropdown>
-                </el-col>  
+                     </el-dropdown>
+                </el-col>
+
             </div>
         </el-col>
 
@@ -92,32 +93,30 @@
                         <el-dropdown-item >
                             <div class="setting-div">
                                 <span class="setting-icon"><i class="material-icons">account_box</i></span> 
-                                <span class="setting-string"> Profile  个人</span>
+                                <span class="setting-string">个人</span>
                             </div>
                         </el-dropdown-item>
 
                         <el-dropdown-item divided>
                             <div class="setting-div">
                                 <span class="setting-icon"><i class="material-icons">settings</i></span> 
-                                <span class="setting-string"> Settings  设置</span>
+                                <span class="setting-string">设置</span>
                             </div>
                         </el-dropdown-item>
 
                         <el-dropdown-item divided>
-                            <div class="setting-div">
+                            <div class="setting-div" @click="signOut">
                                 <span class="setting-icon"><i class="material-icons">assignment_return</i></span> 
-                                <span class="setting-string"> Sign out  退出</span>
+                                <span class="setting-string">退出</span>
                             </div>
                         </el-dropdown-item>
 
                     </el-dropdown-menu>
                 </el-dropdown>
-
-
             </div>
-
-
          </el-col>
+
+
       </el-row>
   </div>
 </template>
@@ -142,7 +141,10 @@ export default {
     }
   },
   methods: {
-
+      signOut:function(){
+          this.$store.commit('logout');
+          this.$router.replace({path: '/'});
+      }
   }
 }
 </script>

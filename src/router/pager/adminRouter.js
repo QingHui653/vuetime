@@ -25,6 +25,7 @@ const MarkdownPage = resolve => require(['@/components/admin/page/MarkdownPage']
 const AmCharts = resolve => require(['@/components/admin/page/BasicCharts'], resolve)
 
 const FormInput = resolve => require(['@/components/admin/page/FormInput'], resolve)
+const FormSubmit = resolve => require(['@/components/admin/page/FormSubmit'], resolve)
 const FormLayouts = resolve => require(['@/components/admin/page/FormLayouts'], resolve)
 const BasicTables = resolve => require(['@/components/admin/page/BasicTables'], resolve)
 const TodoList = resolve => require(['@/components/admin//page/TodoListPage'], resolve)
@@ -58,6 +59,9 @@ export default [{
     }, {
       path: '/FormInput',
       component: FormInput
+    }, {
+      path: '/FormSubmit',
+      component: FormSubmit
     }, {
       path: '/FormLayouts',
       component: FormLayouts

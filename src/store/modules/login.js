@@ -14,6 +14,7 @@ const login = {
     login (state, user) {
       state.user = user
       window.localStorage.setItem('user', JSON.stringify(user))
+      window.sessionStorage.setItem('user', JSON.stringify(user))
     },
     jwtlogin (state, token) {
       state.token = token
@@ -21,6 +22,7 @@ const login = {
     },
     logout (state) {
       window.localStorage.removeItem('user')
+      window.sessionStorage.removeItem('user')
       state.routes = []
     }
   },

@@ -24,7 +24,7 @@
                         <span slot="sb-cn">{{item.name}}</span>
                     </template>
 
-                    <el-menu-item width="180px"
+                    <el-menu-item width="180px" @click="onClickNav(child.name,child.path)"
                                     style="padding-left: 30px;padding-right:0px;margin-left: 0px;width: 170px;text-align: left"
                                     v-for="child in item.children"
                                     :index="child.path"
@@ -51,6 +51,14 @@ export default {
   methods:{
     switchSide:function(){
       console.info("123");
+    },
+    onClickNav:function (title,indexPath) {
+      var tab ={
+        title:title,
+        url:indexPath,
+        current:true,
+      }
+      this.$store.commit('addTabNav',tab);
     }
   }
 }

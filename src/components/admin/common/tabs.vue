@@ -20,34 +20,17 @@
     </div>
 </template>
 <script>
-//TODO 点击 修改当前已选定 同时 切换 路由
-//TODO 点击 关闭, 移除当前 tab,同时 路由先从右边找,在从左边找,最后找DashBoard
 export default {
     name:"tabsNav",
     data () {
       return {
-          tabNavList:[
-            {
-              title:'tabNav1',
-              url:'/FormInput',
-              current:true,
-            },
-            {
-              title:'tabNav2',
-              url:'/FormLayouts',
-              current:false,
-            },
-            {
-              title:'tabNav3',
-              url:'/FormSubmit',
-              current:false,
-            },
-          ]
+        tabNav:[]
       }
     },
     computed:{
       tabs () {
-        return this.$store.state.tabs.tabs
+        this.tabNav= this.$store.state.tabs.tabs;
+        return this.tabNav;
       },
     },
     methods:{
@@ -57,6 +40,10 @@ export default {
       onClickTab(event){
         var el = event.currentTarget;
         var url =el.getAttribute("url");
+        var tab ={
+          url:url,
+        }
+        this.$store.commit('addTabNav',tab);
         this.$router.push(url);
       },
 
@@ -64,6 +51,15 @@ export default {
         var el = event.currentTarget.parentNode;
         var url =el.getAttribute("url");
         this.$store.commit('delTabNav',url);
+
+        if(this.tabNav.length>0){
+          var tab = this.tabNav.pop();
+          tab.current=true;
+          this.$store.commit('addTabNav',tab);
+          this.$router.push(tab.url);
+        }else {
+          this.$router.push("/DashBoard");
+        }
       }
 
 

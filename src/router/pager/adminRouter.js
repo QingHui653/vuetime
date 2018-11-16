@@ -28,7 +28,7 @@ const FormInput = resolve => require(['@/components/admin/page/FormInput'], reso
 const FormSubmit = resolve => require(['@/components/admin/page/FormSubmit'], resolve)
 const FormLayouts = resolve => require(['@/components/admin/page/FormLayouts'], resolve)
 const BasicTables = resolve => require(['@/components/admin/page/BasicTables'], resolve)
-const TodoList = resolve => require(['@/components/admin//page/TodoListPage'], resolve)
+const TodoList = resolve => require(['@/components/admin/page/TodoListPage'], resolve)
 
 const Internation = resolve => require(['@/components/admin/international/international'], resolve)
 const Map = resolve => require(['@/components/admin/map/map'], resolve)

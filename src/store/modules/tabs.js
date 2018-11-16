@@ -1,5 +1,10 @@
 const tabs = {
   state: {
+    //var tab ={
+    //         title:title,
+    //         url:indexPath,
+    //         current:true,
+    //       }
     tabs:[],
   },
   mutations: {

@@ -1,7 +1,9 @@
 const login = {
   state: {
     user: {
-      name: window.localStorage.getItem('user' || '[]') == null ? '未登录' : JSON.parse(window.localStorage.getItem('user' || '[]')).name,
+      // 展示时 不需要 登陆界面
+      // name: window.localStorage.getItem('user' || '[]') == null ? '未登录' : JSON.parse(window.localStorage.getItem('user' || '[]')).name,
+      name: window.localStorage.getItem('user' || '[]') == null ? '已登录' : JSON.parse(window.localStorage.getItem('user' || '[]')).name,
       userface: window.localStorage.getItem('user' || '[]') == null ? '' : JSON.parse(window.localStorage.getItem('user' || '[]')).userface
     },
     routes: [],
